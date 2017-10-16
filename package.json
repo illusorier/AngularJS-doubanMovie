@@ -4,7 +4,8 @@
   "description": "dashboard built with angular1",
   "main": "index.js",
   "scripts": {
-    "build": "npx gulp"
+    "build": "npx gulp",
+    "dev": "npx gulp serve"
   },
   "author": "illusorier",
   "dependencies": {
@@ -13,7 +14,11 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0"
+    "gulp-babel": "^7.0.0",
+    "gulp-inject": "^4.3.0",
+    "gulp-load-plugins": "^1.5.0"
   }
 }
