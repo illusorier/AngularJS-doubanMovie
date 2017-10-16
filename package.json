@@ -1,0 +1,19 @@
+{
+  "name": "angular1-dashboard",
+  "version": "1.0.0",
+  "description": "dashboard built with angular1",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx gulp"
+  },
+  "author": "illusorier",
+  "dependencies": {
+    "angular": "^1.6.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0"
+  }
+}
