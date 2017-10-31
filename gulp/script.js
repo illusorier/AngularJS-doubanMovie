@@ -9,11 +9,10 @@ const sources = [ path.join(conf.paths.src, 'app/index.module.js') ];
 
 function buildScripts() {
     return gulp.src(sources)
-        .pipe(babel())
-        .pipe($.browserify())
+        .pipe($.browserify({ transform: ['babelify'] }))
         .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app')));
 }
 
-gulp.task('scripts', () => {
+gulp.task('scripts', ['eslint'], () => {
     return buildScripts();
 });
