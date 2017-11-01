@@ -4,7 +4,9 @@ const conf = require('./conf');
 
 const $ = require('gulp-load-plugins')();
 
-gulp.task('inject', ['scripts'], () => {
+gulp.task('inject', ['scripts', 'styles'], () => {
+    var injectStyles = gulp.src(path.join(conf.paths.tmp, '/serve/app/**/*.css'), { read: false });
+
     const injectScripts = gulp.src([path.join(conf.paths.tmp, '/serve/app/**/*.module.js')], {read: false});
 
     const injectOptions = {
@@ -13,6 +15,7 @@ gulp.task('inject', ['scripts'], () => {
     };
 
     return gulp.src(path.join(conf.paths.src, '/*.html'))
+        .pipe($.inject(injectStyles, injectOptions))
         .pipe($.inject(injectScripts, injectOptions))
         .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve')));
 });
