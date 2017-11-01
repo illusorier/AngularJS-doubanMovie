@@ -10,6 +10,7 @@ const sources = [ path.join(conf.paths.src, 'app/index.module.js') ];
 function buildScripts() {
     return gulp.src(sources)
         .pipe($.browserify({ transform: ['babelify'] }))
+        // .pipe($.uglify())
         .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app')));
 }
 
