@@ -5,7 +5,7 @@ const path = require('path');
 const browserSync = require('browser-sync');
 const browserSyncSpa = require('browser-sync-spa');
 
-gulp.task('serve', function () {
+gulp.task('serve', ['build', 'watch'], function () {
     browserSync.init({
         server: {
             staticPath: '/',

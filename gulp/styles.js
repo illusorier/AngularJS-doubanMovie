@@ -27,5 +27,5 @@ let buildStyles = function () {
     return gulp.src(path.join(conf.paths.src, '/app/index.scss'))
         .pipe($.inject(injectFiles, injectOptions))
         .pipe($.sass())
-        .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')));
-}
+        .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')))
+};

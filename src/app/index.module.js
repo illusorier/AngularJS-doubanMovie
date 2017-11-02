@@ -8,5 +8,3 @@ import { ModalComponent } from "./components/modal/modal.component";
 angular.module('ng1Dashboard', ['ui.router'])
     .config(routerConfig)
     .component('modal', ModalComponent);
-
-

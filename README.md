@@ -11,3 +11,4 @@ A dashboard built with angular1, gulp , and es6.
 3. watch styles and scripts
 4. vendor.js
 
+compile => inject => watch => compile => inject => reload
