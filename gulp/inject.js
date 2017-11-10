@@ -22,6 +22,6 @@ gulp.task('inject', ['scripts', 'styles'], () => {
         .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve')));
 });
 
-gulp.task('inject-reload', ['inject'], function() {
+gulp.task('inject-reload', ['inject', 'html'], function() {
     browserSync.reload();
 });

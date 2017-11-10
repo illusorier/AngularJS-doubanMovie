@@ -12,3 +12,17 @@ A dashboard built with angular1, gulp , and es6.
 4. vendor.js
 
 compile => inject => watch => compile => inject => reload
+
+##### build的流程
+
+clean
+
+scripts, styles( js和css的预处理 ) => inject ( 将js和css注入html ) 
+
+partials( templateUrl的处理 )
+
+html ( templateCacheHtml的注入 )
+
+build流程结束
+
+##### watch的流程
