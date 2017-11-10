@@ -17,7 +17,3 @@ function buildScripts() {
 gulp.task('scripts', ['eslint'], () => {
     return buildScripts();
 });
-
-gulp.task('scripts:watch', ['scripts'], () => {
-    gulp.watch(path.join(conf.paths.src, 'app/**/*.js'), ['scripts', 'inject-reload']);
-});

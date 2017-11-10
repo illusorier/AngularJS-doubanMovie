@@ -4,7 +4,7 @@ const conf = require('./conf');
 
 const $ = require('gulp-load-plugins')();
 
-gulp.task('styles', function () {
+gulp.task('styles', () => {
     return buildStyles();
 });
 
