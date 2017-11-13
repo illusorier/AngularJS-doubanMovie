@@ -4,8 +4,15 @@ const conf = require('./conf');
 
 const $ = require('gulp-load-plugins')();
 
+const browserSync = require('browser-sync');
+
 gulp.task('styles', () => {
     return buildStyles();
+});
+
+gulp.task('styles-reload', ['styles'], () => {
+    return buildStyles()
+        .pipe(browserSync.stream());
 });
 
 let buildStyles = function () {
