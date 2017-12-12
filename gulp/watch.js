@@ -9,6 +9,8 @@ function isOnlyChange(event) {
 gulp.task('watch', ['inject'], () => {
     gulp.watch(path.join(conf.paths.src, 'app/**/*.js'), ['inject-reload']);
 
+    gulp.watch(path.join(conf.paths.src, 'app/**/*.html'), ['inject-reload']);
+
     gulp.watch([
         path.join(conf.paths.src, '/app/**/*.css'),
         path.join(conf.paths.src, '/app/**/*.scss')

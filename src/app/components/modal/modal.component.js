@@ -1,28 +1,18 @@
-export function ModalComponent() {
-    let component = {
-        templateUrl: 'app/components/modal/modal.html',
-        transclude: true,
-        controller: class {
-            constructor () {
-                this.name = 'bill';
-            }
-
-            $onInit () {
-                console.log('onInit');
-            }
-        },
-        controllerAs: 'vm'
-    };
-
-    class ModalController {
-        constructor () {
-            this.name = 'bill';
-        }
-
-        $onInit () {
-            console.log('onInit');
-        }
+class ModalCtrl {
+    constructor () {
+        this.name = 'bill';
     }
 
-    return component;
+    $onInit () {
+        console.log('onInit');
+    }
 }
+
+let ModalComponent = {
+    templateUrl: 'app/components/modal/modal.html',
+    transclude: true,
+    controller: ModalCtrl,
+    controllerAs: 'vm'
+};
+
+export default ModalComponent;

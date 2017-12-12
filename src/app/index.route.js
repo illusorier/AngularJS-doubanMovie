@@ -1,10 +1,10 @@
 export function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
-            url: '/home',
+            url: '/',
             controller: 'HomeController',
             templateUrl: 'app/pages/home/home.html'
         });
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
 }
