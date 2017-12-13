@@ -9,7 +9,7 @@ import { routerConfig } from './index.route';
 import ModalComponent from "./components/modal/modal.component";
 import { NavBarComponent } from "./components/navbar/navbar.component";
 
-import {HomeController} from "./pages/home/home.controller";
+import HomeComponent from "./pages/home/home.component";
 
 import modalService from './services/modal.service';
 
@@ -18,5 +18,5 @@ angular.module('ng1Dashboard', ['ui.router', 'rx'])
     .config(routerConfig)
     .component('modal', ModalComponent)
     .component('navbar', NavBarComponent())
-    .controller('HomeController', HomeController)
+    .component('home', HomeComponent)
     .service('modalService', modalService);
