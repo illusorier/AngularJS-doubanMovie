@@ -7,9 +7,9 @@ export default class modalService {
 
     addModal($scope) {
         let html = `<modal>
-                              <modal-title>Are you sure ?</modal-title>
-                              <modal-body>You can only do this  times</modal-body>
-                           </modal>`;
+                      <modal-title>Are you sure ?</modal-title>
+                      <modal-body>You can only do this  times</modal-body>
+                    </modal>`;
 
         this.body.append(this.$compile(html)($scope));
     }
