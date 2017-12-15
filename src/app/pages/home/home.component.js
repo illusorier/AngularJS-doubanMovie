@@ -1,9 +1,3 @@
-let HomeComponent = {
-    templateUrl: 'app/pages/home/home.html',
-    controller: HomeController,
-    controllerAs: 'vm'
-};
-
 class HomeController {
     constructor ($scope, $timeout, observeOnScope, modalService) {
         $scope.name = 'bill';
@@ -18,5 +12,11 @@ class HomeController {
         });
     }
 }
+
+let HomeComponent = {
+    templateUrl: 'app/pages/home/home.html',
+    controller: HomeController,
+    controllerAs: 'vm'
+};
 
 export default HomeComponent;

@@ -10,7 +10,10 @@ class ModalCtrl {
 
 let ModalComponent = {
     templateUrl: 'app/components/modal/modal.html',
-    transclude: true,
+    transclude: {
+        title: 'modalTitle',
+        body: 'modalBody'
+    },
     controller: ModalCtrl,
     controllerAs: 'vm'
 };
