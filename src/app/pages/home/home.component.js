@@ -1,5 +1,5 @@
 class HomeController {
-    constructor ($scope, $timeout, observeOnScope, modalService) {
+    constructor ($scope, $timeout, observeOnScope, modalService, apiService) {
         $scope.name = 'bill';
 
         $timeout(() => {
@@ -10,6 +10,8 @@ class HomeController {
         observeOnScope($scope, 'name').subscribe((change) =>{
             console.log(change);
         });
+
+        apiService.getMovieInTheaters();
     }
 }
 

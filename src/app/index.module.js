@@ -8,10 +8,13 @@ import { routerConfig } from './index.route';
 
 import ModalComponent from "./components/modal/modal.component";
 import { NavBarComponent } from "./components/navbar/navbar.component";
-
 import HomeComponent from "./pages/home/home.component";
 
+import MyDirective from "./directives/my-repeat.directive";
+
 import modalService from './services/modal.service';
+
+import apiService from './services/api.service';
 
 angular.module('ng1Dashboard', ['ui.router', 'rx'])
     .config(config)
@@ -19,4 +22,6 @@ angular.module('ng1Dashboard', ['ui.router', 'rx'])
     .component('modal', ModalComponent)
     .component('navbar', NavBarComponent())
     .component('home', HomeComponent)
-    .service('modalService', modalService);
+    .directive('myDirective', () => new MyDirective())
+    .service('modalService', modalService)
+    .service('apiService', apiService);
