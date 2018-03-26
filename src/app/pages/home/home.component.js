@@ -17,8 +17,7 @@ class HomeController {
 
 let HomeComponent = {
     templateUrl: 'app/pages/home/home.html',
-    controller: HomeController,
-    controllerAs: 'vm'
+    controller: HomeController
 };
 
 export default HomeComponent;

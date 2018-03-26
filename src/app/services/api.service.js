@@ -4,7 +4,7 @@ export default class apiService {
     }
 
     getMovieInTheaters() {
-        return this.$http.get('https://api.douban.com/v2/movie/in_theaters').then(function (res) {
+        return this.$http.get('v2/movie/in_theaters').then(function (res) {
             console.log(res);
         })
     }
