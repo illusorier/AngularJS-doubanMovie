@@ -1,4 +1,4 @@
-A dashboard built with angular1, gulp , and es6.
+AngularJS如何与ES6进行结合？
 
 #### Webpack和Gulp的对比
 
